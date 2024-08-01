@@ -19315,7 +19315,7 @@ select:focus {
   text-decoration: underline;
   text-decoration-thickness:3px ;
 }
-.contact{
+.contact li{
   list-style-type: none;
 }
 .contact li img {
