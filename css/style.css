@@ -19315,3 +19315,13 @@ select:focus {
   text-decoration: underline;
   text-decoration-thickness:3px ;
 }
+.contact{
+  list-style-type: none;
+}
+.contact li img {
+  height:30px;
+  width:30px ;
+}
+.footer-top{
+  font-size: small;
+}
