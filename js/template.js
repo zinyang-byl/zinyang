@@ -1,12 +1,12 @@
-(function($) {
+(function ($) {
 	'use strict';
-	$(function() {
+	$(function () {
 		$('.owl-carousel-projects').owlCarousel({
 			loop: true,
 			stagePadding: 100,
-			autoplay:true,
-			autoplayTimeout:2000,
-			dots:false,
+			autoplay: true,
+			autoplayTimeout: 2000,
+			dots: false,
 			margin: 20,
 			nav: false,
 			responsive: {
@@ -23,37 +23,37 @@
 		})
 		var wWidth = $(window).width();
 		var menuWidth = $(".navbar-collapse").width();
-		$(".navbar-toggler").click(function() {
+		$(".navbar-toggler").click(function () {
 			$('.collapsing').toggleClass('show');
 			$('body').addClass("sidebar-overlay");
 		});
-		$("#mobile-menu-overlay, .close-menu, .nav-link").click(function() {
+		$("#mobile-menu-overlay, .close-menu, .nav-link").click(function () {
 			$('.collapse').toggleClass('show');
 			$('body').removeClass("sidebar-overlay");
 		});
 
-		$("a.nav-link").on('click', function(event) {
+		$("a.nav-link").on('click', function (event) {
 			if (this.hash !== "") {
 				event.preventDefault();
 				var hash = this.hash;
 				$('html, body').animate({
 					scrollTop: $(hash).offset().top
-				}, 800, function() {
+				}, 800, function () {
 
 					window.location.hash = hash;
 				});
 			}
 		});
-		$(document).ready(function(){
-			$(window).scroll(function(){
-				if($(window).scrollTop() > $(window).height()){
-					$(".navbar").css({"background":"#0077d8"});
+		$(document).ready(function () {
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > $(window).height()) {
+					$(".navbar").css({ "background": "#0077d8" });
 				}
-				else{
-					$(".navbar").css({"background":" transparent"});
+				else {
+					$(".navbar").css({ "background": " transparent" });
 
 				}
-		
+
 			})
 		})
 
@@ -72,14 +72,14 @@
 			buttons: false,
 		});
 
-		$('.flipster-custom-nav-link').click(function() {
+		$('.flipster-custom-nav-link').click(function () {
 			var navlinkSelected = parseInt(this.title);
 			$('.flipster-custom-nav-link').removeClass("active");
 			$(this).addClass("active");
 			$("#testimonial-flipster").flipster('jump', navlinkSelected);
 		});
 
-		$('#toggle-switch').click(function() {
+		$('#toggle-switch').click(function () {
 			if ($('#toggle-switch').is(':checked')) {
 				$('.monthly').addClass("text-active");
 				$('.yearly').removeClass("text-active");
@@ -96,7 +96,7 @@
 		var isc = parseInt($('.scVal').text());
 		var tim;
 		function run() {
-			tim = setInterval(function() {
+			tim = setInterval(function () {
 				if (isc >= maxScVal) {
 					clearInterval(tim);
 					return;
@@ -108,11 +108,11 @@
 		//Counters
 
 		// counter finished Projects
-		var maxfPVal = 3214;
+		var maxfPVal = 20;
 		var ifP = parseInt($('.fpVal').text());
 		var timfP;
 		function runfP() {
-			timfP = setInterval(function() {
+			timfP = setInterval(function () {
 
 				if (ifP >= maxfPVal) {
 					clearInterval(timfP);
@@ -120,7 +120,7 @@
 				}
 				$('.fpVal').text(++ifP);
 
-			}, 1);
+			}, 400);
 		}
 		runfP();
 		//finished Projects
@@ -130,7 +130,7 @@
 		var itm = parseInt($('.tMVal').text());
 		var timtM;
 		function runtM() {
-			timtM = setInterval(function() {
+			timtM = setInterval(function () {
 				if (itm >= maxtMVal) {
 					clearInterval(timtM);
 					return;
@@ -148,7 +148,7 @@
 		var ibP = parseInt($('.bPVal').text());
 		var timbP;
 		function runbP() {
-			timbP = setInterval(function() {
+			timbP = setInterval(function () {
 				if (ibP >= maxbPVal) {
 					clearInterval(timbP);
 					return;
@@ -161,21 +161,21 @@
 
 
 		//blog post
-		
-		$(window).resize(function() {
+
+		$(window).resize(function () {
 			var scrWidth = $(window).width();
-			if(scrWidth > 991){
+			if (scrWidth > 991) {
 				$('#subban').attr('src', 'images/group1.png');
 			}
-			if(scrWidth < 991){
+			if (scrWidth < 991) {
 				$('#subban').attr('src', '');
 			}
 		});
 
-//=============================
+		//=============================
 
 
-//=============================
+		//=============================
 
 	});
 })(jQuery);
@@ -186,7 +186,7 @@ const swiper = new Swiper('.swiper', {
 	// Optional parameters
 	direction: 'horizontal',
 	loop: true,
-	resizeObserver:true,
+	resizeObserver: true,
 	parallax: true,
 	effect: 'slide',
 	autoplay: {
@@ -197,42 +197,54 @@ const swiper = new Swiper('.swiper', {
 	//   el: '.swiper-pagination',
 	//   dynamicBullets: true,
 	// },
-  
+
 	// Navigation arrows
 	// navigation: {
 	//   nextEl: '.swiper-button-next',
 	//   prevEl: '.swiper-button-prev',
 	// },
-  
+
 	// And if we need scrollbar
 	// scrollbar: {
 	//   el: '.swiper-scrollbar',
 	// },
-  });
+});
 
 //================================
-$('img[data-enlargable]').addClass('img-enlargable').click(function(){
-    var src = $(this).attr('src');
-    $('<div>').css({
-        background: 'RGBA(0,0,0,.5) url('+src+') no-repeat center',
-        backgroundSize: 'contain',
-        width:'100%', height:'100%',
-        position:'fixed',
-        zIndex:'10000',
-        top:'0', left:'0',
-        cursor: 'zoom-out'
-    }).click(function(){
-        $(this).remove();
-    }).appendTo('body');
+$('img[data-enlargable]').addClass('img-enlargable').click(function () {
+	var src = $(this).attr('src');
+	$('<div>').css({
+		background: 'RGBA(0,0,0,.5) url(' + src + ') no-repeat center',
+		backgroundSize: 'contain',
+		width: '100%', height: '100%',
+		position: 'fixed',
+		zIndex: '10000',
+		top: '0', left: '0',
+		cursor: 'zoom-out'
+	}).click(function () {
+		$(this).remove();
+	}).appendTo('body');
 });
 
 
-// =====================================================
+// =========================SWIPER PRODUCTS============================
 
 var swiperr = new Swiper(".mySwiper", {
 	slidesPerView: 1,
 	spaceBetween: 1,
 	loop: true,
-  });
-  //=======================================================
+});
+//=========================END SWIPER PRODUCT==============================
+
+//  =========================CARD FLOW DIRECTION=============================
+$(window).resize(function () {
+	var scrWidth = $(window).width();
+	if (scrWidth > 1000) {
+		$(".flex-container").css({ "display": "flex" });
+	}
+	if (scrWidth < 1000) {
+		$(".flex-container").css({ "display": "block" });
+	}
+});
+//  =========================END FLOW DIRECTION=============================
 
