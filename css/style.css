@@ -10774,7 +10774,17 @@ textarea.form-control {
     transition: none;
   }
 }
-
+.btnm{
+  margin-top: 25px;
+  text-align: center;
+  font-size: 10px;
+}
+.btn a{
+  color: #fff;
+}
+.btnm.btn a{
+  
+}
 .btn:hover {
   color: #6c7293;
   text-decoration: none;
@@ -11370,6 +11380,41 @@ input[type="submit"].btn-block,
 input[type="reset"].btn-block,
 input[type="button"].btn-block {
   width: 100%;
+}
+
+.flex-container{
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, .25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  margin: 50px 0;
+  padding: 10px;
+}
+.specimg {
+ flex: 1;
+}
+.specimg img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 10x;
+}
+.desc{
+  flex: 1;
+  padding: 20px;
+}
+.desc h1{
+ font-size: 24px;
+ margin-bottom: 20px;
+ color: #000000;
+}
+.desc p{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.desc span{
+ font-weight: bold;
 }
 
 .fade {
@@ -12854,7 +12899,7 @@ input[type="button"].btn-block {
 .card {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   min-width: 0;
   word-wrap: break-word;
   background-color: #fff;
@@ -18252,7 +18297,9 @@ h1, h2, h3, h4, h5, h6,
   font-weight: normal;
   line-height: normal;
 }
-
+.cont{
+  text-align: center;
+}
 p {
   font-size: 0.937rem;
   margin-bottom: .5rem;
@@ -18405,12 +18452,10 @@ h6, .h6 {
 
 .footer .footer-bottom {
   background: rgba(255, 255, 255, 0.07);
-  padding: 30px 0;
+  padding: 10px 0;
   border-top: 1px solid rgba(151, 151, 151, 0.07);
-}
-
-.footer .footer-bottom img {
-  width: 200px;
+  display: flex;
+  text-align: center;
 }
 
 .footer .list-footer {
@@ -18623,14 +18668,36 @@ body,
 html {
   overflow-x: hidden;
 }
-
+.bg{
+  /* background-color:rgba(90, 171, 247, 0.75) ; */
+  background-image: url("../images/mc-bg.jpg") ;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.olay{
+  background-color:rgba(90, 171, 247, 0.55);
+  margin-top: -20px;
+}
+.olay2{
+  background-color:rgba(90, 171, 247, 0.55);
+}
 .home {
   background: url("../images/main-banner.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right center;
   width: 100%;
-  height: 750px;
+  height: 760px;
+}
+@media(  min-width : 1300px) {
+  .home {
+    background: url("../images/main-banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+    width: 100%;
+    height: 970px;
+}
 }
 .ovr{
   background-color: rgba(90, 171, 247, 0.75);
@@ -18638,7 +18705,17 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 750px;
+  height:760px;
+}
+@media(  min-width : 1300px) {
+  .ovr{
+    background-color: rgba(90, 171, 247, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:970px;
+  }
 }
 
 @media (max-width: 991px) {
@@ -18648,9 +18725,10 @@ html {
 }
 
 .main-banner {
-  padding: 4rem 0 14rem 0;
+  padding: 10rem 0 15rem 0;
   color: #ffffff;
   background-size: cover;
+  height: 100%;
 }
 
 @media (max-width: 991px) {
@@ -18659,17 +18737,39 @@ html {
     margin-bottom: 50px;
   }
 }
-
-.main-banner .banner-title {
+.banner-title {
   width: 100%;
-  padding-top: 9rem;
+  padding-top: 10rem;
+}
+.banner-title2 {
+  width: 100%;
+  padding-top: 4rem;
 }
 
 @media (max-width: 991px) {
-  .main-banner .banner-title {
+.banner-title {
     width: 100%;
     margin-top: 5rem;
   }
+}
+@media (max-width: 380px) {
+.banner-title {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+}
+.mainb{
+  padding-top:160px;
+  text-align: center;
+  color:#fff;
+}
+.banner h1{
+    /* color: #333;
+    -webkit-text-stroke: 1px #282828;
+    text-shadow: 0px 4px 4px #282828; */
+}
+.cf{
+  padding-top:20px ;
 }
 
 section {
@@ -18684,10 +18784,21 @@ section {
 
 @media (max-width: 991px) {
   section {
-    padding: 70px 0 0 0;
+    padding: 50px 0 0 0;
   }
 }
-
+.mtitle{
+  padding-top: 80px;
+}
+.mtitle h3{
+  font-weight: bold;
+  font-family: "Fira Sans", sans-serif;
+}
+@media (max-width: 1025px) {
+  .mtitle{
+    padding-top: 20px;
+  }
+}
 .services-box {
   padding: 10px 100px 40px 0;
 }
@@ -19310,12 +19421,25 @@ select:focus {
 }
 .justifytx{
   text-align: justify;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+@media(max-width:575px){
+  .justifytx{
+    text-align: justify;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+}
+.why{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-top: 15px;
 }
 .fot-of{
   text-decoration: underline;
   text-decoration-thickness:3px ;
 }
-.contact li{
+.contact{
   list-style-type: none;
 }
 .contact li img {
@@ -19325,3 +19449,52 @@ select:focus {
 .footer-top{
   font-size: small;
 }
+.motto{
+  text-align: justify;
+  font-size: 18px;
+}
+.vision{
+  padding-top: 20px;
+  text-align: justify;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.5px;
+}
+.tab1{
+  align-content: start;
+}
+.underm{
+  justify-content: center;
+  text-align: center;
+  margin: 20px 0;
+}
+.underm img{
+  max-width:55%;
+  max-height:55%;
+  margin: 50px 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital@0;1&display=swap');
+.fira-sans-regular {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.fira-sans-regular-italic {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+.info{
+  text-align: left;
+  margin-bottom: 60px;
+}
+.info td{
+  font-size: large;
+  font-family:"Fira Sans", sans-serif;
+  padding: 10px;
+}
+
+/* THIS NAVBAR FOR DIFF STYLE */
+
+
+/* THIS NAVBAR FOR DIFF STYLE */
